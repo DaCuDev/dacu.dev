@@ -1,6 +1,6 @@
 const express = require('express')
 require('dotenv').config()
-const { writeFile } = require('@cyclic.sh/s3fs') 
+const { writeFile } = require('@cyclic.sh/s3fs')('cyclic-kind-pink-abalone-cuff-us-east-2')
 
 const app = express()
 app.use(express.json())
