@@ -1,7 +1,9 @@
 const express = require('express')
 require('dotenv').config()
 const { writeFile } = require('fs')
+
 const app = express()
+app.use(express.static('public'))
 const port = 8080
 
 // Transcripts
