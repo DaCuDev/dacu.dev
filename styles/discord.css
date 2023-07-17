@@ -1,0 +1,238 @@
+#text {
+    margin-top: 80px;
+    color: white;
+    font-size: 50px;
+}
+
+body p {
+    font-size: 20px;
+}
+
+body {
+    padding-bottom: 1000px;
+}
+
+.profile {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+}
+
+.profile img {
+    user-select: none;
+}
+
+.profile-banner {
+    height: 106px;
+    width: 595px;
+    position: relative;
+    border-style: solid;
+    border-width: 3px;
+    border-bottom-width: 0px;
+    border-radius: 8px 8px 0 0;
+    border-color: rgb(35,36,40);
+    background-color: rgb(187, 24, 236);
+}
+
+.profile-edit-container {
+    width: 24px;
+    height: 24px;
+    border-radius: 17px;
+    padding: 5px;
+    background-color: #0000004c;
+
+    position: absolute;
+    top: 14px;
+    right: 16px;
+}
+
+.profile-edit {
+    color: white;
+    cursor: not-allowed;
+}
+
+.profile-background {
+    height: 360px;
+    width: 600px;
+    position: relative;
+    background-color: rgb(35,36,40);
+    border-radius: 0 0 8px 8px;
+}
+
+.profile-icon {
+    height: 125px;
+    width: 125px;
+    border-radius: 62.5px;
+    background-color: rgb(35,36,40);
+
+    position: absolute;
+    top: 35px;
+    left: 13px;
+}
+
+.profile-icon img {
+    height: 120px;
+    width: 120px;
+    padding: 13px 0 0 3px
+}
+
+.profile-status {
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    background-color: rgb(19,20,22);
+
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 89px;
+    left: 78px
+}
+
+.profile-online {
+    width: 24px;
+    height: 24px;
+    border-radius: 12px;
+    background-color: rgb(35, 165, 90);
+}
+
+.profile-badges {
+    height: 24px;
+    width: 102px;
+    padding: 2px 4px 2px 4px;
+    background-color: rgb(17,18,20);
+    border-radius: 8px;
+
+    position: absolute;
+    top: 127px;
+    left: 147px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 6px;
+}
+
+.profile-badges img {
+    cursor: pointer;
+}
+
+.profile-hypesquad {
+    height: 19px;
+    width: 17px;
+}
+
+.profile-activedev {
+    height: 19px;
+    width: 19px;
+}
+
+.profile-nitro {
+    height: 23px;
+    width: 23px;
+}
+
+.profile-legacy {
+    height: 20px;
+    width: 20px;
+}
+
+.profile-info-container {
+    height: 266px;
+    width: 568px;
+    border-radius: 8px;
+    background-color: rgb(17, 18, 20);
+
+    position: absolute;
+    left: 16px;
+    bottom: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-nickname {
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(219, 222, 225);
+    margin: 12px 0 0 12px;
+}
+
+.profile-username {
+    font-size: 14px;
+    line-height: 24px;
+    color: rgb(181, 186, 193);
+    margin-left: 12px;
+}
+
+.profile-tabs {
+    display: flex;
+    column-gap: 40px;
+    margin: 20px 12px 0 12px;
+    border-bottom: 1px solid rgba(78, 80, 88, 0.48);
+}
+
+.profile-info-title,
+.profile-activity-title {
+    font-size: 14px;
+    height: 39px;
+    font-weight: 500;
+}
+
+.profile-info-title {
+    color: white;
+    border-bottom: 2px solid white;
+}
+
+.profile-activity-title {
+    color: rgb(181, 186, 193);
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+}
+
+.profile-activity-title:hover {
+    color: rgb(219, 222, 225);
+    border-bottom-color: rgb(219, 222, 225);
+}
+
+.profile-info-tab {
+    height: 120px;
+    width: 544px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    margin-left: 12px;
+    border-image-width: initial;
+}
+
+.profile-registered-title,
+.profile-note-title {
+    color: rgb(242, 243, 245);
+    font-size: 12px;
+    font-weight: 700px;
+}
+
+.profile-registered {
+    color: rgb(219, 222, 225);
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    margin: 8px 0 16px 0;
+}
+
+.profile-note-field {
+    margin-top: 8px;
+    padding: 4px 4px 4px 0;
+    height: 29px;
+    width: 100%;
+    font-size: 14px;
+    color: rgb(219, 222, 225);
+    caret-color: rgb(219, 222, 225);
+    font-family: Arial, sans-serif;
+    background-color: transparent;
+    overflow: clip;
+    border: none;
+    resize: none;
+}
+
+.profile-note-field:focus {
+    outline: none;
+}
