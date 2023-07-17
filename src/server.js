@@ -21,7 +21,7 @@ app.post('/transcripts', (req, res) => {
   const options = {
     Bucket: process.env.CYCLIC_BUCKET_NAME,
     Key: `transcripts/${Date}.html`,
-    Body: html,
+    Body: html
   }
 
   s3.putObject(options, (err) => {
