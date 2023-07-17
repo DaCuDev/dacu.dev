@@ -1,6 +1,6 @@
 const express = require('express')
 require('dotenv').config()
-const { writeFile } = require('fs')
+const { writeFile } = require('@cyclic.sh/s3fs') 
 
 const app = express()
 app.use(express.json())
