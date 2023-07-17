@@ -8,7 +8,6 @@ const app = express()
 app.use(express.json())
 app.use(express.static('public'))
 const port = process.env.PORT || 8080
-console.log(process.env.AWS_ACCESS_KEY_ID)
 
 // Transcripts
 app.post('/transcripts', (req, res) => {
