@@ -20,7 +20,7 @@ app.post('/transcripts', (req, res) => {
 
   const options = {
     Bucket: process.env.CYCLIC_BUCKET_NAME,
-    Key: `public/transcripts/${Date}.html`,
+    Key: `transcripts/${Date}.html`,
     Body: html,
   }
 
