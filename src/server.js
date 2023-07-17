@@ -1,11 +1,14 @@
 const express = require('express')
 require('dotenv').config()
-const { writeFile } = require('@cyclic.sh/s3fs')(process.env.CYCLIC_BUCKET_NAME)
+const AWS = require('aws-sdk')
+require('aws-sdk/lib/maintenance_mode_message').suppress = true
+const s3 = new AWS.S3()
 
 const app = express()
 app.use(express.json())
 app.use(express.static('public'))
 const port = process.env.PORT || 8080
+console.log(process.env.AWS_ACCESS_KEY_ID)
 
 // Transcripts
 app.post('/transcripts', (req, res) => {
@@ -16,7 +19,13 @@ app.post('/transcripts', (req, res) => {
     return;
   }
 
-  writeFile(`public/transcripts/${Date}.html`, html, (err) => {
+  const options = {
+    Bucket: process.env.CYCLIC_BUCKET_NAME,
+    Key: `public/transcripts/${Date}.html`,
+    Body: html,
+  }
+
+  s3.putObject(options, (err) => {
     
     if (err) {
       console.error(err)
