@@ -1,8 +1,9 @@
 const express = require('express')
 const axios = require('axios')
 
-const app = express()
 const port = 3000
+const app = express()
+app.use(express.static('public'))
 
 app.get('/transcripts', async (req, res) => {
     try {
