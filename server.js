@@ -20,16 +20,9 @@ app.get('/transcripts', async (req, res) => {
     try {
         const id = req.query.id
         if (!id) return res.status(400).json({error: 'Missing ID'})
-  
-        const { Schema, model } = mongoose
 
-        const transcriptSchema = new Schema({
-            ID: String,
-            File: String
-        })
-
-        const allTranscripts = model('transcriptSchema', transcriptSchema)
-        const data = await allTranscripts.findOne({ID: id})
+        const transcriptSchema = require('./transcriptSchema')
+        const data = await transcriptSchema.findOne({ID: id})
         if (!data) return res.status(404).json({error: 'Transcript not found'})
 
         res.send(data.File)
